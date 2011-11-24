@@ -1,0 +1,27 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Download Bundle</h1>
+    <a href="<%%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse"
+       <%%= "data-ajax='false'" if is_bb6 %>>Home</a>
+      
+  </div>
+
+  <div data-role="content">
+<br>
+    <ul data-role="listview">
+
+    <form method="POST" action="<%= url_for :action => :do_bundle_download %>">
+       
+          <div data-role="fieldcontain">
+            <label for="url" class="fieldLabel">URL:</label>
+            <input type="text" id="url" name="url" value="http://mohus.hut4.ru/upgrade_bundle.zip" />
+          </div>
+      <input type="submit" value="Download and Replace"/>
+    </form>
+
+    </ul>
+  </div>
+
+</div>
+
