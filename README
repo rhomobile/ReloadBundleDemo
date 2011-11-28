@@ -5,3 +5,6 @@ rake build:bundle:upgrade_package
 package named "upgrade_bundle.zip" will be placed in "bin" folder
 
 Modify default zip package name in /app/Bundle/index.erb
+
+
+Current upgrade bundle have only one diffenrence - "upgraded" in title on main home page.
