@@ -2,34 +2,6 @@ require 'rho/rhocontroller'
 require 'helpers/application_helper'
 require 'helpers/browser_helper'
 
-module Rho
-module RhoSupport
-    def self.rhobundle_getfilename()
-        File.join( __rhoGetCurrentDir(), '/RhoBundle/upgrade_bundle.zip')
-    end
-    
-    def self.rhobundle_download(download_url, download_callback)
-
-        file_name = rhobundle_getfilename()
-        dir_name = File.dirname(file_name)
-        if Dir.exists?(dir_name) && System.delete_folder(dir_name) != 0
-            return false
-        end
-        
-        Dir.mkdir(dir_name) unless Dir.exists?(dir_name)
-        
-        Rho::AsyncHttp.download_file(
-                 :url => download_url,
-                 :filename => file_name,
-                 :headers => {},
-                 :callback => download_callback ) if download_url
-                 
-        return true
-                
-    end
-end
-end
-
 class BundleController < Rho::RhoController
   include BrowserHelper
   include ApplicationHelper
