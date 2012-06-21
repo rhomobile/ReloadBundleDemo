@@ -1,0 +1,26 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Download Bundle</h1>
+    <a href="<%%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse"
+       <%%= "data-ajax='false'" if is_bb6 %>>Home</a>
+      
+  </div>
+
+  <div data-role="content">
+<br>
+Bundle was downloaded.<br>
+When you press button, bundle will update.<br>
+Application do not restart after update!
+<br>
+<br>
+<br>
+
+    <form method="POST" action="<%= url_for :action => :do_bundle_replace_partial %>">
+      <input type="submit" value="Update now !"/>
+    </form>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,5 @@
+app/index.erb
+app/NewPage/controller.rb
+app/NewPage/index.erb
+app/PageWithImage/image.png
+app/PageWithImage/index.erb

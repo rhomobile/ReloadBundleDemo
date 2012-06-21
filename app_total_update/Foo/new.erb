@@ -1,0 +1,30 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @foo.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @foo.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="foo[bar1]" class="fieldLabel">Bar1</label>
+            <input type="text" id="foo[bar1]" name="foo[bar1]" <%= placeholder("Bar1") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="foo[bar2]" class="fieldLabel">Bar2</label>
+            <input type="text" id="foo[bar2]" name="foo[bar2]" <%= placeholder("Bar2") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

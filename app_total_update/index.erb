@@ -1,7 +1,7 @@
 <div data-role="page" data-url="<%= Rho::RhoConfig.start_path %>/">
 
   <div data-role="header" data-position="inline">
-    <h1>Index ORIG</h1>
+    <h1>Index TUPD</h1>
     <% if SyncEngine::logged_in > 0 %>
     <a href="<%= url_for :controller => :Settings, :action => :do_sync %>" class="ui-btn-left" data-icon="refresh">
       Sync
@@ -18,6 +18,7 @@
     <ul data-role="listview">
       <li><a href="<%= url_for :controller => :Bundle, :action => :index %>">Bundle test ...</a></li>
       <li><a href="<%= url_for :controller => :Foo, :action => :index %>">Foo Model ...</a></li>
+      <li><a href="<%= url_for :controller => :FooNew, :action => :index %>">Foo New Model  ...</a></li>
       <li><a href="<%= url_for :controller => :PageWithImage, :action => :index %>">Page with Image  ...</a></li>
       <li><a href="<%= url_for :controller => :RemovedPage, :action => :index %>">Removed Page  ...</a></li>
       <li><a href="<%= url_for :controller => :NewPage, :action => :index %>">Added Page  ...</a></li>

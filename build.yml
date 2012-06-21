@@ -1,6 +1,6 @@
 sdk: "/Users/MOHUS/rhodes"
 sdkversion: 3.2.1
-name: BundleReplace1
+name: BundleReplace
 version: 1.0
 vendor: rhomobile
 build: debug
@@ -8,7 +8,7 @@ bbver: 4.6
 applog: rholog.txt
 iphone:
   configuration: Release
-  sdk: iphonesimulator5.0
+  sdk: iphonesimulator5.1
   provisionprofile: 0C0F1664-BE89-430A-9FDE-231538F657B2
   codesignidentity: iPhone Developer
   entitlements: ""
@@ -19,6 +19,6 @@ wp:
 symbian:
   uid: '0xe8dbfaac'
 android:
-  version: 2.1
+  version: 4.0.3
 
 extensions: ["json"]
