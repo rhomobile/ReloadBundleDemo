@@ -33,7 +33,7 @@ class BundleController < Rho::RhoController
   
   def do_bundle_replace
     if System.unzip_file(::Rho::RhoSupport.rhobundle_getfilename())==0
-        System.replace_current_bundle( File.dirname(::Rho::RhoSupport.rhobundle_getfilename()) )
+        System.replace_current_bundle( File.dirname(::Rho::RhoSupport.rhobundle_getfilename()), {} )
         render :action => :wait_replace, :back => '/app'
     else
         WebView.navigate url_for :action => :error    
